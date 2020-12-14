@@ -7,6 +7,12 @@ const initialState: BalanceState = {
 
 export default function reducer(state = initialState, action: BalanceAction) {
   switch (action.type) {
+    case "balance/deposit": {
+      return {
+        ...state,
+        amount: state.amount + action.payload,
+      };
+    }
     default: {
       return state;
     }
