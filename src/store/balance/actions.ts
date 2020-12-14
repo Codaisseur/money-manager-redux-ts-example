@@ -5,3 +5,8 @@ export const deposit = (depositAmount: number): BalanceAction => ({
   type: "balance/deposit",
   payload: depositAmount,
 });
+
+export const withdraw = (withdrawAmount: number): BalanceAction => ({
+  type: "balance/withdraw",
+  payload: withdrawAmount,
+});
