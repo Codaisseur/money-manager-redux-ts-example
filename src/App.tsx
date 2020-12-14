@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { selectBalance } from "./store/balance/selectors";
 import { deposit } from "./store/balance/actions";
 
 function App() {
   const dispatch = useDispatch();
-  const [balance, setBalance] = useState(0);
+  const balance = useSelector(selectBalance);
 
   return (
     <div className="App">
