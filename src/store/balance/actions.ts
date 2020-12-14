@@ -10,3 +10,7 @@ export const withdraw = (withdrawAmount: number): BalanceAction => ({
   type: "balance/withdraw",
   payload: withdrawAmount,
 });
+
+export const reset = (): BalanceAction => ({
+  type: "balance/reset",
+});

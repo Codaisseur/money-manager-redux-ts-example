@@ -19,6 +19,12 @@ export default function reducer(state = initialState, action: BalanceAction) {
         amount: state.amount - action.payload,
       };
     }
+    case "balance/reset": {
+      return {
+        ...state,
+        amount: initialState.amount,
+      };
+    }
     default: {
       return state;
     }
